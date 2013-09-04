@@ -1,0 +1,30 @@
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Branch<th>
+</tr>
+
+<% var stdId;%>
+
+<% _.each(model,function(student){ %>
+
+<tr>
+<td><input type="text" name="studentId" value="<%= student.studentId %>" disabled="disabled"/></td>
+<td><input type="text" name="studentName"  value="<%= student.studentName %>"/></td>
+<td><input type="text" name="branch" name="branch"  value="<%= student.branch %>"/></td>
+<td><button class="update">Update</button></td>
+<td><button class="delete">Delete</button></td>
+</tr>
+
+<% stdId=student.id
+}); %>
+
+<tr>
+<th>Create New Entry</th>
+</tr>
+<tr>
+<td><input type="text" name="studentId" value="st_00<%= stdId+1 %>" disabled="disabled"/></td>
+<td><input type="text" name="studentName"/></td>
+<td><input type="text" name="branch" name="branch"/></td>
+<td><button class="create">Create</button></td>
+</tr>
